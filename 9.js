@@ -4,4 +4,3 @@ let obj={
      
 }
 
-console.log("hello")

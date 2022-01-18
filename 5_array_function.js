@@ -285,3 +285,5 @@ var rate=1.1
 // })
 // console.log(arr1)                               //[ 4, 6, 8, 10 ]
 
+
+console.log(jaldip)

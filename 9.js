@@ -3,3 +3,5 @@ let obj={
     name : "jaldip bhalani"
      
 }
+
+console.log("hello")

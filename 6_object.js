@@ -157,11 +157,14 @@ let employee = {
 //2     //this        this = current object
 var person = {
   personName: "raj",
+  age:23,
   birthday: function () {               //object literals
-    // console.log(this)
+//     console.log(this)                   //{ personName: 'raj', birthday: [Function: birthday] }   //this = current object
+//     console.log(this.age)               //23
     return `happy birthday to ${person.personName}`
   }
 };
+// person.birthday()
 // console.log(person);            //{ personName: 'raj', birthday: [Function: birthday] }
 // console.log(person.birthday()); //happy birthday to raj
 
@@ -228,21 +231,21 @@ var person = {
 // // horse.type="something else"
 // console.log(horse)
 
-var treiner={
-    name :"abc",
-    subject:["math","oh","chem"],
-    teches:["f","s"],
-    age:60,
-}
-var prop=""
-for(p in treiner){
-    prop+=p+":";
-}
-console.log(prop)
+// var treiner={
+//     name :"abc",
+//     subject:["math","oh","chem"],
+//     teches:["f","s"],
+//     age:60,
+// }
+// var prop=""
+// for(p in treiner){
+//     prop+=p+":";
+// }
+// console.log(prop)
 
-delete treiner.age;
-var prop=""
-for(p in treiner){
-    prop+=p+":";
-}
-console.log(prop)
+// delete treiner.age;
+// var prop=""
+// for(p in treiner){
+//     prop+=p+":";
+// }
+// console.log(prop)

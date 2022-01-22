@@ -13,14 +13,15 @@
     <h1 style="text-align: center"><b> Skill Qode Nasta House</b></h1>
     <div class="main">
         <div class="container">
-            <div class="part1" style="position: relative; margin: 0% 35%">
+            <div class="part1" style="position: relative; margin-left: 20%; margin-right: 50%;">
+                <span>
                 <fieldset>
                     <legend>Personal Information</legend>
                     Full Name : <input type="text" id="name"><br><br>
                     E-Mail : <input type="email" id="email"><br>
                 </fieldset>
             </div>
-            <div class="part2" style="position: relative; margin: 0% 35%">
+            <div class="part2" style="position: relative; margin-left: 20%; margin-right: 50%;">
                 <fieldset>
                     <legend>Your order</legend>
                     Samosa (Rs.10)  : <input type="number" placeholder="Enter Qty" id="Samosa" ><br><br>
@@ -28,8 +29,10 @@
                     Vadapav (Rs.25) : <input type="number" placeholder="Enter Qty" id="Vadapav" ><br><br>
                     Meggi (Rs.30)   : <input type="number" placeholder="Enter Qty" id="Meggi" ><br>
                 </fieldset>
+            </span>
             </div>
-         <div class="container" style="position: relative; margin: 0% 35%;">
+            <span>
+            <div class="container" style=" margin-left: 51%; margin-right: 20%; margin-top: -20%;">
             <fieldset>
                 <legend>Your bill</legend>
                 <p style="text-align: right;">Date:<span id="date" style="text-align: right;"></span></p><hr>
@@ -49,6 +52,7 @@
                 <p style="text-align: right;"><span id="hour"></span>:<span id="minit"></span>:<span id="sec"></span></p>
                 
             </fieldset>
+        </span>
         </div>  
     </div>
     
@@ -142,11 +146,6 @@
             document.getElementById("sec").innerHTML=textSecond
             };
             setInterval(countdown, 1000);
-            countdown()
-           
-
-
-        
     </script>
 </body>
 </html>

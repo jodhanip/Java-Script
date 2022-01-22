@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s.css">
+
+</head>
+<body>
+    <script defer src="1.js"></script>
+    <h1 style="text-align: center"><b> Skill Qode Nasta House</b></h1>
+    <div class="main">
+        <div class="container">
+            <div class="part1" style="position: relative; margin: 0% 35%">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    Full Name : <input type="text" id="name"><br><br>
+                    E-Mail : <input type="email" id="email"><br>
+                </fieldset>
+            </div>
+            <div class="part2" style="position: relative; margin: 0% 35%">
+                <fieldset>
+                    <legend>Your order</legend>
+                    Samosa (Rs.10)  : <input type="number" placeholder="Enter Qty" id="Samosa" ><br><br>
+                    Kachori (Rs.17) : <input type="number" placeholder="Enter Qty" id="Kachori" ><br><br>
+                    Vadapav (Rs.25) : <input type="number" placeholder="Enter Qty" id="Vadapav" ><br><br>
+                    Meggi (Rs.30)   : <input type="number" placeholder="Enter Qty" id="Meggi" ><br>
+                </fieldset>
+            </div>
+         <div class="container" style="position: relative; margin: 0% 35%;">
+            <fieldset>
+                <legend>Your bill</legend>
+                <h2 style="text-align: center;">Skill qode</h2>
+                <h3>Your Name : <span id="name2"></span> </h3>
+                <h3>Your E-mail : <span id="email2"></span> </h3>
+                <table  border=2;>
+                    <thead>
+                        <tr><th>Menu</th><th>price</th><th>Qty</th><th>Amount</th></tr>
+                    </thead>
+                    <tbody id="statment">
+                    </tbody>
+                       <tr><td colspan="3"><strong>Total Amount :</strong></td><td><strong id="amount"></strong></td></tr>
+                </table>
+            </fieldset>
+            
+        </div>  
+    </div>
+    
+    <script> 
+    document.getElementById("name").addEventListener("keyup",function(){
+        // n1=document.getElementById("name").value
+            document.getElementById("name2").innerHTML=this.value
+        })
+        document.getElementById("email").addEventListener("keyup",function(){
+            // e1=this.value
+            document.getElementById("email2").innerHTML=this.value
+        })
+
+        var a1=0,a2=0,a3=0,a4=0,s1="",s2="",s3="",s4=""
+        document.getElementById("Samosa").addEventListener("keyup",function(){
+            s1=test("Samosa",10,this.value) , a1=x
+            Show_Bill()
+        })
+        document.getElementById("Kachori").addEventListener("keyup",function(){
+            s2=test("Kachori",17,this.value) , a2=x
+            Show_Bill()
+        })
+        document.getElementById("Vadapav").addEventListener("keyup",function(){
+            s3=test("Vadapav",25,this.value) , a3=x
+            Show_Bill()
+        })
+        document.getElementById("Meggi").addEventListener("keyup",function(){
+            s4=test("Meggi",30,this.value) , a4=x
+            Show_Bill()
+        })
+
+       var test = function(id,price,qty){            
+            if(qty == "" || qty <= 0){
+                show =""
+                x=0
+                return document.getElementById("statment").innerHTML=show
+            }else{
+                 show = "<tr><td>"+id+"</td><td>"+price+"</td><td>"+qty+"</td><td>"+(x=price*qty)+"</td></tr>"
+                return document.getElementById("statment").innerHTML=show
+            }
+        }
+        function Show_Bill(){
+            document.getElementById("statment").innerHTML=s1+s2+s3+s4
+            document.getElementById("amount").innerHTML=a1+a2+a3+a4
+        } 
+    </script>
+</body>
+</html>

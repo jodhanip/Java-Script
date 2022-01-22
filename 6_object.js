@@ -155,15 +155,15 @@ let employee = {
 // console.log(person.birthday())      //happy birthday
 
 //2     //this        this = current object
-var person = {
-  personName: "raj",
-  age:23,
-  birthday: function () {               //object literals
-//     console.log(this)                   //{ personName: 'raj', birthday: [Function: birthday] }   //this = current object
-//     console.log(this.age)               //23
-    return `happy birthday to ${person.personName}`
-  }
-};
+// var person = {
+//   personName: "raj",
+//   age:23,
+//   birthday: function () {               //object literals
+// //     console.log(this)                   //{ personName: 'raj', birthday: [Function: birthday] }   //this = current object
+// //     console.log(this.age)               //23
+//     return `happy birthday to ${person.personName}`
+//   }
+// };
 // person.birthday()
 // console.log(person);            //{ personName: 'raj', birthday: [Function: birthday] }
 // console.log(person.birthday()); //happy birthday to raj
@@ -216,7 +216,7 @@ var person = {
 // console.log(student.getResult()); //pass
 
 
-//rakesh bhai extra
+//R.G extra
 
 //object creat using constructer type function
 // var person=function(){
@@ -249,3 +249,19 @@ var person = {
 //     prop+=p+":";
 // }
 // console.log(prop)
+
+// //merge two object
+// // object 1
+// const person = {
+//   name : "jack",
+//   age : 45,
+// }
+
+// //object 2
+// const student ={
+//   gender:"male",
+// }
+
+// // const newobj = Object.assign(person,student);
+// const newobj = {...person,...student} //{ name: 'jack', age: 45, gender: 'male' }
+// console.log(newobj)                   //{ name: 'jack', age: 45, gender: 'male' }

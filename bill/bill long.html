@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s.css">
+
+</head>
+<body>
+    <script defer src="1.js"></script>
+    <h1 style="text-align: center"><b> Nasta House</b></h1>
+    <div class="main">
+        <div class="container">
+            <div class="part1" style="position: relative; margin: 0% 35%">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    Full Name : <input type="text" id="name"><br><br>
+                    E-Mail : <input type="email" id="email"><br>
+                </fieldset>
+            </div>
+            <div class="part2" style="position: relative; margin: 0% 35%">
+                <fieldset>
+                    <legend>Your order</legend>
+                    Samosa (Rs.10)  : <input type="number" placeholder="Enter Qty" id="Samosaa" ><br><br>
+                    Kachori (Rs.17) : <input type="number" placeholder="Enter Qty" id="Kachorii" ><br><br>
+                    Vadapav (Rs.25) : <input type="number" placeholder="Enter Qty" id="Vadapavv" ><br><br>
+                    Meggi (Rs.30)   : <input type="number" placeholder="Enter Qty" id="Meggii" ><br>
+                </fieldset>
+            </div>
+         <div class="container" style="position: relative; margin: 0% 35%">
+            <fieldset>
+                <legend>Your bill</legend>
+                <h3>Your Name : <span id="name2"></span> </h3>
+                <h3>Your E-mail : <span id="email2"></span> </h3>
+                <table style="margin-left: 20%; " border=2;>
+                    <thead>
+                        <tr><th>Menu</th><th>price</th><th>Qty</th><th>Amount</th>
+                    </thead>
+                    <tbody id="statment"></tbody>
+                </tr>
+                </table>
+                <h2>Total Amount : <span id="amount"></span></h2>
+            </fieldset>
+        </div>
+    </div>
+
+    <script>
+    var samosa_price=10,Kachori_price=17,Vadapav_price=25,meggi_price=30
+    var samosa_qty=0,Kachori_qty=0,Vadapav_qty=0,meggi_qty=0
+    var samosa_price_show="",Kachori_price_show="",Vadapav_price_show="",meggi_price_show=""
+
+      document.getElementById("name").addEventListener("keyup",function(){
+            // n1=document.getElementById("name").value
+            document.getElementById("name2").innerHTML=this.value
+        })
+        document.getElementById("email").addEventListener("keyup",function(){
+            // e1=this.value
+            document.getElementById("email2").innerHTML=this.value
+        })
+
+        document.getElementById("Samosaa").addEventListener("keyup",function(){
+            samosa_qty=this.value
+            if(this.value == "" || this.value <= 0){
+                samosa_price_show =""
+                // samosa_qty=0
+                Show_Bill()
+            }else{
+                samosa_price_show = "<tr><td>Samosa</td><td>"+samosa_price+"</td><td>"+samosa_qty+"</td><td>"+samosa_price*samosa_qty+"</td></tr>"
+                Show_Bill()
+            }
+        })
+
+        document.getElementById("Kachorii").addEventListener("keyup",function(){
+            Kachori_qty=this.value
+            if(this.value == "" || this.value <= 0){
+                Kachori_price_show =""
+                Show_Bill()
+                Kachori_qty=0
+            }else{
+                Kachori_price_show = "<tr><td>Kachori</td><td>"+Kachori_price+"</td><td>"+Kachori_qty+"</td><td>"+Kachori_price*Kachori_qty+"</td></tr>"
+                Show_Bill()
+            }
+        })
+
+        document.getElementById("Vadapavv").addEventListener("keyup",function(){
+            Vadapav_qty=this.value
+            if(this.value == "" || this.value <= 0){
+                Vadapav_price_show =""
+                Show_Bill()
+                Vadapav_qty=0
+            }else{
+                Vadapav_price_show = "<tr><td>Vadapav</td><td>"+Vadapav_price+"</td><td>"+Vadapav_qty+"</td><td>"+Vadapav_price*Vadapav_qty+"</td></tr>"
+                Show_Bill()
+            }
+        })
+
+        document.getElementById("Meggii").addEventListener("keyup",function(){
+            meggi_qty=this.value
+            if(this.value == "" || this.value <= 0){
+                meggi_price_show =""
+                Show_Bill()
+                meggi_qty=0
+            }else{
+                meggi_price_show = "<tr><td>meggi</td><td>"+meggi_price+"</td><td>"+meggi_qty+"</td><td>"+meggi_price*meggi_qty+"</td></tr>"
+                Show_Bill()
+            }
+        })
+
+        function Show_Bill(){
+            document.getElementById("statment").innerHTML=samosa_price_show+Kachori_price_show+Vadapav_price_show+meggi_price_show
+            document.getElementById("amount").innerHTML=(samosa_qty*samosa_price)+(Kachori_price*Kachori_qty)+(Vadapav_price*Vadapav_qty)+(meggi_price*meggi_qty)
+        }
+
+
+    </script>
+    
+</body>
+</html>

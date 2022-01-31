@@ -1,0 +1,14 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.board{
+    background: linear-gradient(rgb(175, 209, 175),pink);
+    width: 550px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+    border: 3px solid black;
+}

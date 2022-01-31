@@ -55,4 +55,4 @@
 
 //13.toFixed()
 var t=34.898989
-console.log(t.toFixed(1))  //34.89000
+console.log(t.toFixed(3))  //34.899

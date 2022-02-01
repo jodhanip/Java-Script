@@ -2,8 +2,11 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    background: linear-gradient(rgb(146, 146, 193),rgb(199, 199, 77));
+    min-height: 100vh;
+
 }
-.board{
+#board{
     background: linear-gradient(rgb(175, 209, 175),pink);
     width: 550px;
     height: 550px;
@@ -11,4 +14,23 @@
     grid-template-columns: repeat(18,1fr);
     grid-template-rows: repeat(18,1fr);
     border: 3px solid black;
+}
+.food{
+    background-color: chocolate;
+    border-radius: 12px;
+    border: black solid 2px;
+}
+.head{
+    background-color: purple;
+    border-radius: 12px;
+    border: white solid 2px;
+    transform: scale(1.2);
+}
+.snake{
+    background-color: royalblue;
+    border-radius: 12px;
+    border: white solid 2px;
+}
+#scoree{
+    font-size: larger;
 }

@@ -1,0 +1,15 @@
+.con{
+    margin:15px 20% 0 20%;
+    border: 2px solid black;
+    background: url(bg.jpg); 
+    
+    border-radius: 10px;
+    height: 70vh;
+}
+.last{
+    margin:5px 20% 0 20%;
+    background: black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}

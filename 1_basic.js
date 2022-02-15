@@ -8,7 +8,7 @@
 // console.log(typeof(i))                  //number
 
 
-console.log("hello w''\orld")            //hello w''orld
+// console.log("hello w''\orld")            //hello w''orld
 
 //String
 // var a=String(34)
@@ -34,3 +34,9 @@ console.log("hello w''\orld")            //hello w''orld
 // var c=Array([45,89])
 // console.log(c,typeof c)                     //[ [ 45, 89 ] ] object
 
+var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+var add ='garlic'
+veggies.push(add)
+console.log(veggies)                            //[ 'potato', 'tomato', 'chillies', 'green-pepper', 'garlic' ]
+console.log("new collection :" , veggies)       //new collection : [ 'potato', 'tomato', 'chillies', 'green-pepper', 'garlic' ]
+console.log("new collection :" + veggies)       //new collection :potato,tomato,chillies,green-pepper,garlic

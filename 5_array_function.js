@@ -1,7 +1,136 @@
-let fruits=["apple","banana","kiwi","chicoo","df"]
-
-//1. length
+// length
 // console.log(fruits.length)        //4
+
+
+//1     .at(index+-)                                                                                    => element or undefined
+// let fruits=["apple","banana","kiwi","chicoo","df"]
+// console.log(fruits.at())                                                                              //apple
+// console.log(fruits.at(2))                                                                             //kiwi
+// console.log(fruits.at(-2))                                                                            //chicoo
+// console.log(fruits.at(99))                                                                            //undefined
+
+//2     .indexOf(searchElement, fromIndex)                                                               =>index or -1 or 0
+// const beasts = ['ant', 'bison', 'camel', 'duck', 'bison','duck', 'bison',"ant"];
+// console.log(beasts.indexOf('bison'));                                                                //1
+// console.log(beasts.indexOf('giraffe'));                                                              //-1
+// console.log(beasts.indexOf('bison', 2));                                                             //4
+// console.log(beasts.indexOf('bison', 3));                                                             //4
+
+// var indices = [];
+// var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+// var element = 'a';
+// var idx = array.indexOf(element);
+// while (idx != -1) {
+//   indices.push(idx);
+//   idx = array.indexOf(element, idx + 1);
+// }
+// console.log(indices);                                                                                 // [0, 2, 4]
+
+//3     .lastIndexOf(searchElement, fromIndex)                                                          =>index or -1 or 0
+// const beasts = ['ant', 'bison', 'camel', 'duck', 'bison','duck', 'bison','ant'];
+// console.log(beasts.lastIndexOf('bison'));                                                            //6
+// console.log(beasts.lastIndexOf('giraffe'));                                                          //-1
+// console.log(beasts.lastIndexOf('bison', 2));                                                         //4
+// console.log(beasts.lastIndexOf('bison', 3));                                                         //4
+
+//4     array1.concat(array2, ... , arrayN)                                                             =>merge two or more arrays
+// const a1=["a","b","c"]
+// const a2=["d","e","f"]
+// console.log(a1.concat(a2))         //[ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+// 5    .entries()                                                                                      => pair(index and value)
+// var a = ['a', 'b', 'c'];
+// for (const [index, element] of a.entries())
+//   console.log(index, element);                                                                       // 0 'a'
+//                                                                                                      // 1 'b'
+//                                                                                                      // 2 'c'
+// var a = ['a', 'b', 'c']; 
+// var iterator = a.entries();  
+// for (let e of iterator) {    
+//   console.log(e);                                                                                    // [0, 'a']
+// }                                                                                                    // [1, 'b']
+//                                                                                                      // [2, 'c']
+
+// 6   .every((element, index, array) => {                                                             => boolean at least one false,return false
+// const num=[1,2,3,4,5]
+// var check = (hi)=>hi%2==0                            //arrow
+// console.log(num.every(check))                                                                        //false
+// var check = function (hi){return hi%2==0}            //anonymous
+// console.log(num.every(check))                                                                        //false
+
+// // check=((hi)=>hi%2==0)               
+// // console.log(num.every(check))                     //call back by arrow                            //false
+
+// console.log(num.every((hi)=>hi%2==0))                //call back by arrow                            //false
+// console.log(num.every(function(hi){hi%2==0}))        //call back by anonymous                        //false
+
+// function isBigEnough(element, index, array) {        //simple function
+//     return element >= 10;
+//   }
+//   console.log([12, 52, 41, 130, 44].every(isBigEnough));                                             // true
+
+// function isSubset(array1, array2) {
+//     return array2.every(function (element) {
+//         console.log(element)
+//       return array1.includes(element);                  //return true or false
+//     });
+//   }
+//   console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6]));                                           // true
+//   console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7]));                                           // false
+
+// 7   .some((element, index, array) => {                                                              => boolean at least one true,return true
+// const num=[1,2,3,4,5]
+// var check = (hi)=>hi%2==0                              //arrow
+// console.log(num.some(check))                                                                         //true
+// var check = function (hi){return hi%2==0}              //anonymous
+// console.log(num.some(check))                                                                         //true
+
+// // check=((hi)=>hi%2==0)               
+// // console.log(num.some(check))                        //call back by arrow                          //true
+
+// console.log(num.some((hi)=>hi%2==0))                   //call back by arrow                          //true
+// console.log(num.some(function(hi){return hi%2==0}))    //call back by anonymous                      //true
+
+// function isBigEnough(element, index, array) {          //simple function
+//     return element >= 10;
+//   }
+//   console.log([12, 52, 4, 130, 44].some(isBigEnough));                                               // true
+
+// const fruit = ['apple', 'banana', 'mango', 'guava'];
+// function checkAvailability(arr, val) {
+//   return arr.some(function(ele) {
+//       console.log(ele)
+//     return val === ele;                         //return true or false
+//   });
+// }
+// console.log(checkAvailability(fruit, 'kela'));   // false
+// console.log(checkAvailability(fruit, 'banana')); // true
+
+
+// 8    .fill(value, start+-, end+-)        //(main array change)                                       =>filled with value.
+// const num=[1,2,3,4,5]
+// console.log(num.fill(0, 2, 4));                                                                      //[ 1, 2, 0, 0, 5 ]
+// [1, 2, 3].fill(4)                                                                                    // [4, 4, 4]
+// [1, 2, 3].fill(4, 1)                                                                                 // [1, 4, 4]
+// [1, 2, 3].fill(4, 1, 2)                                                                              // [1, 4, 3]
+// [1, 2, 3].fill(4, 1, 1)                                                                              // [1, 2, 3]
+// [1, 2, 3].fill(4, 3, 3)                                                                              // [1, 2, 3]
+// [1, 2, 3].fill(4, -3, -2)                                                                            // [4, 2, 3]
+
+
+//9     .flat(depth)                                                                                     =>sub-array concatenated
+// const arr2 = [0, 1, 2, [[[3, 4]]]];
+// console.log(arr2.flat(2));                                                                              //[ 0, 1, 2, [ 3, 4 ] ]
+
+//7.indexof()
+// console.log(fruits.indexOf("kiwi"))                                                                  //2
+// console.log(fruits.indexOf("kiw"))                                                                   //-1
+
+
+
+
+
+
 
 //2.forEach()
 // fruits.forEach(function(a,b,c){        //(a=elements, b=index, c=array)          //call back with annonymous
@@ -16,7 +145,9 @@ let fruits=["apple","banana","kiwi","chicoo","df"]
 
 //3.pop()
 // let a=fruits.pop()
-// console.log(fruits)                 //[ 'apple', 'banana', 'kiwi' ]
+// f=fruits.join("")
+// console.log(f)                 //[ 'apple', 'banana', 'kiwi' ]
+// console.log(a)                 //[ 'apple', 'banana', 'kiwi' ]
 // var n1=[]
 // let b=n1.pop()                 //undefined
 // console.log(b)                 //[ 'apple', 'banana', 'kiwi' ]
@@ -40,20 +171,11 @@ let fruits=["apple","banana","kiwi","chicoo","df"]
 // var d=fruits.shift()                 
 // console.log(fruits)                 //[ 'banana', 'kiwi', 'chicoo' ]
 
-//7.indexof()
-// console.log(fruits.indexOf("kiwi"))          //2
-// console.log(fruits.indexOf("kiw"))           //-1
-
-//8.concat()
-// const a1=["a","b","c"]
-// const a2=["d","e","f"]
-// console.log(a1.concat(a2))         //[ 'a', 'b', 'c', 'd', 'e', 'f' ]
-// console.log(a1.concat(a2))         //[ 'a', 'b', 'c', 'd', 'e', 'f' ]
 
 
-// 9.lastIndexOf()
-// let fruits=["apple","banana","kiwi","banana","chicoo"]
-// console.log(fruits.lastIndexOf("banana"))                //3
+
+
+
 
 // 10.reverse()
 // console.log(fruits.reverse())          //[ 'chicoo', 'kiwi', 'banana', 'apple' ]
@@ -69,34 +191,10 @@ let fruits=["apple","banana","kiwi","chicoo","df"]
 // console.log(fruits.includes("kiwi"))         //true
 // console.log(fruits.includes("berry"))         //false
 
-// 14.at()
-// console.log(fruits.at(2))   //kiwi
 
-const num=[1,2,3,4,5]
 
-// 15.every()        -----return boolean-------
-// var check = (hi)=>hi%2==0
-// console.log(num.every(check))     //false
 
-// function isBigEnough(element, index, array) {
-//     return element >= 10;
-//   }
-//   [12, 5, 8, 130, 44].every(isBigEnough);   // false
-//   [12, 54, 18, 130, 44].every(isBigEnough); // true
 
-//16.some()            -----return boolean-------
-// var check = (hi)=>hi%2==0
-// console.log(num.some(check))     //true
-
-// const fruit = ['apple', 'banana', 'mango', 'guava'];
-// function checkAvailability(arr, val) {
-//   return arr.some(function(ele) {
-//       console.log(ele)
-//     return val === ele;
-//   });
-// }
-// console.log(checkAvailability(fruit, 'kela'));   // false
-// console.log(checkAvailability(fruit, 'banana')); // true
 
 // 21.find()               --------return first satisfies element
 // console.log(num.find(x => x>3))              //4
@@ -159,10 +257,10 @@ var array1 = [1, 2, 'a', '1a'];
 // var new_number=12
 // console.log([100,...number,new_number])    //[ 100, 1, 2, 3, 12 ]
 
-// 26.entries()
-// var array1 = ['a', 'b', 'c'];
-const iterator1 = array1.entries();
-// console.log(iterator1.next().value);    //[ 0, 'a' ]
+
+
+
+
 
 // -----------extra------------
 
@@ -202,8 +300,6 @@ var amt=[200,450,-400,-3000,-650,-130,70,1300]
                                //1 - 450
                                //2 - -40
 
-// 24.fill()
-console.log(num.fill(0, 2, 4));         //[ 1, 2, 0, 0, 5 ]
 
 // 1  //using for...of
 // for(var [x,y] of amt.entries()){
@@ -275,7 +371,7 @@ var rate=1.1
 // //using filter()
 // arr2=[]
 // a.filter((ele)=>{
-//     arr2.push(ele*2)
+//     arr2.push(ele*2)z
 // })
 // console.log(arr2)                               //[ 2, 4, 6, 8, 10 ]
 
@@ -286,4 +382,4 @@ var rate=1.1
 // console.log(arr1)                               //[ 4, 6, 8, 10 ]
 
 
-console.log(jaldip)
+// console.log(jaldip)

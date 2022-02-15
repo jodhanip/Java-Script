@@ -44,13 +44,13 @@
 
 //=============================================================================================================================================
 
-// let person = {
-//     first_Name: "John",
-//     last_Name: "Doe",
-//     middle_Name: "C",
-//     current_Age: "18"
-// }
-// object distructring //type 1
+let person = {
+    first_Name: "John",
+    last_Name: "Doe",
+    middle_Name: "C",
+    current_Age: "18"
+}
+// // object distructring //type 1
 // let { middle_Name, first_Name, last_Name, current_Age: age = 60 } = person   //Assigning to new variable names (age)
 // console.log(typeof (first_Name))    //string
 // console.log(last_Name)          //Doe
@@ -71,8 +71,10 @@
 
 // object distructring //type 2
 // let b = person
-// // console.log(first_Name)          //error
+// console.log(first_Name)          //error
 // console.log(typeof (first_Name))    //undefined
+// console.log(b.first_Name)          //Jone
+// console.log(typeof (b.first_Name))    //string
 // console.log(b)
 // // {
 //     first_Name: 'John',
@@ -112,14 +114,14 @@ let employee = {
 }
 
 // 1
-// let {
-//     name: {
-//         first_Name,
-//         last_Name
-//     }
-// } = employee
+let {
+    name: {
+        first_Name,
+        last_Name
+    }
+} = employee
 
-// console.log(first_Name) //John
+console.log(first_Name) //John
 
 //2
 // let { last_Name, middle_Name: mn } = employee.name
@@ -133,10 +135,10 @@ let employee = {
 // let { last_Name, middle_Name, ...rest } = employee.name
 // console.log(typeof (rest))      //object
 // console.log(rest)               //{
-//  first_Name: 'John',
-//  current_Age: '18',
-//  address: { city: 'surat', state: 'gujrat', country: 'india' }
-//}  
+//                                     first_Name: 'John',
+//                                     current_Age: '18',
+//                                     address: { city: 'surat', state: 'gujrat', country: 'india' }
+//                                  }  
 // console.log(last_Name)      //Doe
 // console.log(middle_Name)    //C 
 

@@ -182,7 +182,7 @@
 
 
 //20. .split()
-const a="skill qode the programming lab"
+// const a="skill qode the programming lab"
 // console.log(a.split())                                                        //[ 'skill qode the programming lab' ]
 // console.log(a.split(""))                                                      //['s', 'k', 'i', 'l', 'l', ' ','q', 'o', 'd', 'e', ' ', 't','h', 'e', ' ', 'p', 'r', 'o','g', 'r', 'a', 'm', 'm', 'i','n', 'g', ' ', 'l', 'a', 'b'] 
 // console.log(a.split(" "))                                                     //[ 'skill', 'qode', 'the', 'programming', 'lab' ]

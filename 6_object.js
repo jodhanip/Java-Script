@@ -267,3 +267,11 @@ console.log(first_Name) //John
 // // const newobj = Object.assign(person,student);
 // const newobj = {...person,...student} //{ name: 'jack', age: 45, gender: 'male' }
 // console.log(newobj)                   //{ name: 'jack', age: 45, gender: 'male' }
+
+
+// let obj={
+//     A:"hello",
+//     B:"world",
+//     A:"jds"
+// }
+// console.log(obj)

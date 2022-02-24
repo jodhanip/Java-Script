@@ -26,7 +26,7 @@
 // }
 // console.log(indices);                                                                                 // [0, 2, 4]
 
-//3     .lastIndexOf(searchElement, fromIndex)                                                          =>index or -1 or 0
+//3     .lastIndexOf(searchElement, fromIndex)                                                          =>last index or -1 or 0
 // const beasts = ['ant', 'bison', 'camel', 'duck', 'bison','duck', 'bison','ant'];
 // console.log(beasts.lastIndexOf('bison'));                                                            //6
 // console.log(beasts.lastIndexOf('giraffe'));                                                          //-1

@@ -231,14 +231,39 @@ variable  functionName = (Parameter1, Parameter2, ..) =>
                 argument inside of another function is called a callback function. </li>
 
             <h5 class="SE">Example:</h5>
-            <div class="row">
-                <div class="col-lg-6" class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
-                  
+            <div class="out">
+                <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
+                    <pre class="box1">
+ // callback function
+ function firstFunc(){
+     console.log("call first...")
+ }
+                    
+ // function
+ function secondFunc(para){
+     para()
+     console.log("call second...")
+ }
+
+ //passing function as an argument
+ secondFunc(firstFunc);</pre>
                 </div>
 
-                <div class="col-lg-6" class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
+                <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
                     <pre class="box1">
+ // callback function
+ function firstFunc(){
+     console.log("call first...")
+ }
+                    
+ // function
+ function secondFunc(para){
+     console.log("call second...")
+     para()
+    }
 
+ //passing function as an argument
+ secondFunc(firstFunc);</pre>
                 </div>
             </div>
             <div>
@@ -260,18 +285,17 @@ variable  functionName = (Parameter1, Parameter2, ..) =>
                 </div>
             </div>
 
+            
+        <div class="boxes">
+            <hr>
+            <li>In JavaScript, you can also pass a function as an argument to a function. This function that is passed
+                as an
+                argument inside of another function is called a callback function. </li>
 
-            <div class="row">
-                <hr>
-                <li>In JavaScript, you can also pass a function as an argument to a function. This function that is
-                    passed
-                    as an
-                    argument inside of another function is called a callback function. </li>
-
-                <h5 class="SE">Example:</h5>
-                <div class="col-lg-6">
-                    <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
-                        <pre class="box1">
+            <h5 class="SE">Example:</h5>
+            <div class="out">
+                <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
+                    <pre class="box1">
  function secondFunc(para){
      para()
      console.log("call second...")
@@ -279,10 +303,10 @@ variable  functionName = (Parameter1, Parameter2, ..) =>
 
  // call back by arrow
  secondFunc(()=>console.log("call first..."))</pre>
-                    </div>
+                </div>
 
-                    <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
-                        <pre class="box1">
+                <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%;">
+                    <pre class="box1">
  function secondFunc(para){
      para()
      console.log("call second...")
@@ -292,35 +316,46 @@ variable  functionName = (Parameter1, Parameter2, ..) =>
  secondFunc(function(){
    console.log("call first...")
  })</pre>
-                    </div>
                 </div>
-
-                <h5 class="SE">Output:</h5>
-                <div class="col-lg-6">
-                    <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%">
-                        <pre class="box">
+            </div>
+            
+            <h5 class="SE">Output:</h5>
+            <div class="out">
+                <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%">
+                    <pre class="box">
  call first...
  call second...
 </pre>
-                    </div>
-                    <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%">
-                        <pre class="box">
+                </div>
+                <div class="shadow border border-primary border border-3 bg-light rounded-3 " style="width: 50%">
+                    <pre class="box">
  call first...
  call second...
 </pre>
-                    </div>
                 </div>
-
-                <li>In the above program, there are two functions. While calling the secondFunc() function, one argument
-                    as
-                    function are passed. The firstFunc() function is a callback function.</li>
-                <hr>
-
             </div>
 
-            <h5 class="SE">Example:Program with setTimeout()</h5>
-            <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
-                <pre class="box">
+            
+
+
+
+
+
+
+
+
+
+
+
+            <li>In the above program, there are two functions. While calling the secondFunc() function, one argument as
+                function are passed. The firstFunc() function is a callback function.</li>
+            <hr>
+
+        </div>
+
+        <h5 class="SE">Example:Program with setTimeout()</h5>
+        <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
+            <pre class="box">
  //  program that shows the delay in execution
 
  function greet() {
@@ -334,27 +369,26 @@ variable  functionName = (Parameter1, Parameter2, ..) =>
  // calling the function
  setTimeout(greet, 2000);
  sayName('John');</pre>
-            </div>
-            <h5 class="SE">Output:</h5>
-            <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
-                <pre class="box">
+        </div>
+        <h5 class="SE">Output:</h5>
+        <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
+            <pre class="box">
  Hello John
  Hello world
 </pre>
-            </div>
-            <ul type="square">
-                <li>As you know, the setTimeout() method executes a block of code after the specified time.</li>
-                <li>Here, the greet() function is called after 2000 milliseconds (2 seconds). During this wait, the
-                    sayName('John'); is executed. That is why Hello John is printed before Hello world.</li>
-                <li>The above code is executed <U>asynchronously</U> (the second function; sayName() does not wait for
-                    the
-                    first function; greet() to complete).</li>
-            </ul>
-            <hr>
+        </div>
+        <ul type="square">
+            <li>As you know, the setTimeout() method executes a block of code after the specified time.</li>
+            <li>Here, the greet() function is called after 2000 milliseconds (2 seconds). During this wait, the
+                sayName('John'); is executed. That is why Hello John is printed before Hello world.</li>
+            <li>The above code is executed <U>asynchronously</U> (the second function; sayName() does not wait for the
+                first function; greet() to complete).</li>
+        </ul>
+        <hr>
 
-            <h5 class="SE">Example:Using a Callback Function</h5>
-            <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
-                <pre class="box">
+        <h5 class="SE">Example:Using a Callback Function</h5>
+        <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
+            <pre class="box">
  // Callback Function Example
  function greet(name, myFunction) {
      console.log('Hello world');
@@ -371,57 +405,70 @@ variable  functionName = (Parameter1, Parameter2, ..) =>
                     
  // calling the function after 2 seconds
  setTimeout(greet, 2000, 'John', sayName);</pre>
-            </div>
-            <h5 class="SE">Output:</h5>
-            <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
-                <pre class="box">
+        </div>
+        <h5 class="SE">Output:</h5>
+        <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
+            <pre class="box">
  Hello world
  Hello Jone
 </pre>
+        </div>
+        <ul type="square">
+            <li>In the above program, the code is executed <U>synchronously</U>. The sayName() function is passed as an
+                argument to the greet() function.</li>
+            <li>The setTimeout() method executes the greet() function only after 2 seconds. However, the sayName()
+                function waits for the execution of the greet() function.</li>
+            <div class="card border-info rounded border-3" style="max-width: 50rem;">
+                <div class="card-header"><b>Note : </b> The callback function is helpful when you have to wait for a
+                    result that takes time. For example, the data coming from a server because it takes time for data to
+                    arrive.</div>
+
             </div>
-            <ul type="square">
-                <li>In the above program, the code is executed <U>synchronously</U>. The sayName() function is passed as
-                    an
-                    argument to the greet() function.</li>
-                <li>The setTimeout() method executes the greet() function only after 2 seconds. However, the sayName()
-                    function waits for the execution of the greet() function.</li>
-                <div class="card border-info rounded border-3" style="max-width: 50rem;">
-                    <div class="card-header"><b>Note : </b> The callback function is helpful when you have to wait for a
-                        result that takes time. For example, the data coming from a server because it takes time for
-                        data to
-                        arrive.</div>
-
-                </div>
-                <hr>
+            <hr>
 
 
 
-                <h5 class="SE">Examle:</h5>
-                <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
-                    <pre class="box">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h5 class="SE">Examle:</h5>
+            <div class="shadow border border-primary border border-3 bg-light rounded-3 ">
+                <pre class="box">
  test = () => "Hello World!";                                           //Hello World!
  test();</pre>
-                </div>
-                <p>It gets shorter! If the function has only one statement, and the statement returns a value, you can
-                    remove the brackets and the return keyword :</p>
-                <hr>
+            </div>
+            <p>It gets shorter! If the function has only one statement, and the statement returns a value, you can
+                remove the brackets and the return keyword :</p>
+            <hr>
 
 
 
 
-        </div>
+    </div>
 
-        <div class="row">
-            <div class="col-lg-6">hello</div>
-            <div class="col-lg-6">world</div>
-        </div>
+    <div class="col-sm-12 ">
+        <div class="col-lg-6">hello</div>
+        <div class="col-lg-6">world</div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-
-
+        
 </body>
 
 </html>

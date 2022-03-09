@@ -1,0 +1,35 @@
+.headingg{
+    color: brown ; 
+    font-weight: bolder;
+}
+.h5{
+    color: rgb(40, 95, 15);
+    font-weight: lighter ;
+}
+.SE{
+    font-weight: bold;
+    font-style: italic;
+}
+.box{
+    font-weight: bold ;
+    font-size: medium;
+}
+li{
+    font-weight: 600;
+    font-size: larger;
+}
+.out{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.cp{
+    color: blueviolet;
+}
+/* .cb{
+    color:rgb(72, 72, 235)
+}
+.cy{
+    color: rgb(255, 255, 30);
+} */

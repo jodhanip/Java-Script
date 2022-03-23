@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student add</title>
+</head>
+
+<body>
+    <h2>Student list</h2>
+    <div id="list"></div>
+
+</body>
+<script>
+    students = [
+        { name: "Jaldip", course: "C" },
+        { name: "Rakesh", course: "JS" }
+    ]
+    function enrollStudent(newStudent) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (1) {
+                    students.push(newStudent);
+                    resolve("Student has been enrolled");
+                }
+                else {
+                    reject("Some error here");
+                }
+            }, 1000);
+        });
+    }
+
+    function getStudent() {
+        setTimeout(() => {
+            str = ""
+            students.forEach(element => {
+                str += `<li>${element.name}</li>`
+            });
+            document.getElementById("list").innerHTML = str;
+            console.log("Student has been fatched");
+        }, 3000);
+    }
+
+
+    newStud = { name: "Ankitt", course: "flutter" };
+//..promise consume/receiving value
+    enrollStudent(newStud)
+        .then((para) => console.log(para))
+        .then(getStudent())
+        .catch((para1) => console.log(para1))
+
+</script>
+
+</html>

@@ -4,10 +4,7 @@ let snakeArr = [{ x: 13, y: 15 }]
 let score = 0
 
 
-
-
-
-setInterval(Game_Engine, 10)
+setInterval(Game_Engine, 100)
 
 
 function end(Sna) {
@@ -22,12 +19,18 @@ function end(Sna) {
     return false
 }
 
+let arr=[]
 function Game_Engine() {
     //Part 1 : 
     if (end(snakeArr)) {
         alert("Game Over. Plase PRESS any Key")
         snakeArr = [{ x: 13, y: 15 }]
         inputDir = { x: 0, y: 0 }
+        arr.push(score)
+        console.log(arr)
+        score=0
+        const hiscore = Math.max(...arr)
+        hiscoree.innerHTML = "hiScore : " + hiscore;
 
     }
     if (snakeArr[0].x == food.x && snakeArr[0].y == food.y) {
@@ -36,6 +39,7 @@ function Game_Engine() {
         snakeArr.unshift({ x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y })
         food = { x: food.x = Math.round(Math.random() * 15), y: Math.round(Math.random() * 15) }
     }
+
 
 
     //moveing Snake

@@ -44,20 +44,20 @@
 
 //=============================================================================================================================================
 
-let person = {
-    first_Name: "John",
-    last_Name: "Doe",
-    middle_Name: "C",
-    current_Age: "18"
-}
-// // object distructring //type 1
+// let person = {
+    // first_Name: "John",
+    // last_Name: "Doe",
+    // middle_Name: "C",
+    // current_Age: "18"
+// }
+// // // object distructring //type 1
 // let { middle_Name, first_Name, last_Name, current_Age: age = 60 } = person   //Assigning to new variable names (age)
 // console.log(typeof (first_Name))    //string
 // console.log(last_Name)          //Doe
 // console.log(middle_Name)        //C
 // console.log(age)                //18
 
-// let a = { middle_Name, first_Name, last_Name, current_Age: age = 60 } = person
+// let a = { middle_Name, first_Name, current_Age: age = 60 } = person
 // console.log(last_Name)          //Doe
 // console.log(middle_Name)        //C
 // console.log(age)                //18
@@ -72,6 +72,7 @@ let person = {
 // object distructring //type 2
 // let b = person
 // console.log(first_Name)          //error
+// console.log(b.first_Name)          //John
 // console.log(typeof (first_Name))    //undefined
 // console.log(b.first_Name)          //Jone
 // console.log(typeof (b.first_Name))    //string
@@ -99,29 +100,29 @@ let person = {
 // let { c } = getPerson()
 // console.log(c) //undefined undefined
 
-let employee = {
-    name: {
-        first_Name: "John",
-        last_Name: "Doe",
-        middle_Name: "C",
-        current_Age: "18",
-        address: {
-            city: "surat",
-            state: "gujrat",
-            country: "india"
-        }
-    }
-}
+// let employee = {
+//     name: {
+//         first_Name: "John",
+//         last_Name: "Doe",
+//         middle_Name: "C",
+//         current_Age: "18",
+//         address: {
+//             city: "surat",
+//             state: "gujrat",
+//             country: "india"
+//         }
+//     }
+// }
 
 // 1
-let {
-    name: {
-        first_Name,
-        last_Name
-    }
-} = employee
+// let {
+//     name: {
+//         first_Name,
+//         last_Name
+//     }
+// } = employee
 
-console.log(first_Name) //John
+// console.log(first_Name) //John
 
 //2
 // let { last_Name, middle_Name: mn } = employee.name
@@ -161,8 +162,8 @@ console.log(first_Name) //John
 //   personName: "raj",
 //   age:23,
 //   birthday: function () {               //object literals
-// //     console.log(this)                   //{ personName: 'raj', birthday: [Function: birthday] }   //this = current object
-// //     console.log(this.age)               //23
+//     // console.log(this)                   //{ personName: 'raj', birthday: [Function: birthday] }   //this = current object
+//     // console.log(this.age)               //23
 //     return `happy birthday to ${person.personName}`
 //   }
 // };
@@ -199,13 +200,13 @@ console.log(first_Name) //John
 // maths - 34
 
 //4 object distructring in function
-// var fun1 = function ({ studentName: sn, email: em, dateofbirth, ...other }) {
-//   console.log("fun1", sn, em);          //fun1 scott scott@gmail.com
-//   console.log(other)                    //{ phone: '123456', city: 'london' }
-//   console.log(other["phone"],other.city)   //123456 london
-// };
-// var student={studentName:"scott",email:"scott@gmail.com",phone:"123456",city:"london"}
-// fun1(student);
+var fun1 = function ({ studentName: sn, email: em, dateofbirth, ...other }) {
+  console.log("fun1", sn, em);          //fun1 scott scott@gmail.com
+  console.log(other)                    //{ phone: '123456', city: 'london' }
+  console.log(other["phone"],other.city)   //123456 london
+};
+var student={studentName:"scott",email:"scott@gmail.com",phone:"123456",city:"london"}
+fun1(student);
 
 // 5
 // var student = {};

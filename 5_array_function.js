@@ -14,7 +14,7 @@
 // console.log(beasts.indexOf('bison'));                                                                //1
 // console.log(beasts.indexOf('giraffe'));                                                              //-1
 // console.log(beasts.indexOf('bison', 2));                                                             //4
-// console.log(beasts.indexOf('bison', 3));                                                             //4
+// console.log(beasts.indexOf('bison', 5));                                                             //4
 
 // var indices = [];
 // var array = ['a', 'b', 'a', 'c', 'a', 'd'];
@@ -254,8 +254,8 @@
 
 
 //22.splice(start+-, deleteCount, item1, item2, itemN)                                                        =>section of an array.(main array change)
-// console.log(fruits.splice(2,3))        //[ 'kiwi', 'chicoo' ]
-// console.log(fruits)
+// console.log(fruits.splice(2,3))        //[ 'Lemon', 'Apple', 'Mango' ]
+// console.log(fruits)                    //[ 'Banana', 'Orange' ]
 
 // let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
 // var removed = myFish.splice(2)
@@ -488,7 +488,7 @@
 // }
 // console.log(array)                          //[ 2, 4, 6, 8, 10 ]
 
-//using for...of
+//using for...in
 // array=[]        
 // for(var ele in a){                          //index
 //     console.log(ele)                          //[ '0', '1', '2', '3', '4' ]

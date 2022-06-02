@@ -661,6 +661,33 @@
 // console.log(jaldip)
 
 
+// ############################## for...of ##### for...in ############################
+// let arr = ["Apple", "Orange", "Pear"];
+// let obj = {name:"jaldip",age:20}
+
+// // array
+// // for (let value of arr) {
+// //   console.log(value);                                               // Apple, Orange, Pear
+// // }
+
+// for (let key in arr) {
+//   console.log(arr[key]);                                        // 0 Apple, 1 Orange, 2 Pear
+// }
+
+// for (let [key,val] of arr.entries()) {
+//   console.log(key,val);                                             // 0 Apple, 1 Orange, 2 Pear
+// }
+
+// // object
+// for (let key in obj) {
+//     console.log(key,obj[key]);                                     // name jaldip , age 20
+// }
+
+// for (let [key,val] of Object.entries(obj)) {
+//   console.log(key,val);                                            // name jaldip , age 20
+// }
+
+
 // ########################### Static methods ############################
 // 1. Array.from(arrayLike, function mapFn(element) { /* ... */ }, thisArg)                                     => A new Array instance.
 //    Array.from(arrayLike, (element, index) => { /* ... */ } )

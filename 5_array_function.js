@@ -324,6 +324,7 @@
 //   console.log(flatten(nested));                                                                            // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 // 25  .filter((element, index, array) => {                                                                    =>satisfies new array  or empty array []  can’t changes ele
+// Ex : 1
 // let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
 
 // function filterItems(arr, query) {
@@ -331,6 +332,33 @@
 //     return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
 //   })
 // }
+
+// console.log(filterItems(fruits, 'ap'))                                                                     // ['apple', 'grapes']
+// console.log(filterItems(fruits, 'an'))                                                                     // ['banana', 'mango', 'orange']
+
+// Ex : 2
+// let army = {
+//     minAge: 18,
+//     maxAge: 27,
+//     canJoin(ele) {
+//         console.log(ele);
+//       return ele.age >= this.minAge && ele.age < this.maxAge;
+//     }
+//   };
+  
+//   let users = [
+//     {age: 16},
+//     {age: 20},
+//     {age: 23},
+//     {age: 30}
+//   ];
+  
+//   // find users, for who army.canJoin returns true
+//   let soldiers = users.filter(army.canJoin, army);
+  
+//   console.log(soldiers.length); // 2
+//   console.log(soldiers[0].age); // 20
+//   console.log(soldiers[1].age); // 23
 
 // console.log(filterItems(fruits, 'ap'))                                                                     // ['apple', 'grapes']
 // console.log(filterItems(fruits, 'an'))                                                                     // ['banana', 'mango', 'orange']

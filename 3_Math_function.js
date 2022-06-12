@@ -54,5 +54,5 @@
 // console.log(Math.trunc(56.20)) //56
 
 //13.toFixed()
-var t=34.898989
-console.log(t.toFixed(3))  //34.899
+// var t=34.898989
+// console.log(t.toFixed(3))  //34.899
